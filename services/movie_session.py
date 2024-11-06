@@ -36,7 +36,7 @@ def update_movie_session(
         show_time: str = None,
         movie_id: int = None,
         cinema_hall_id: int = None
-) -> MovieSession:
+) -> QuerySet:
     current_movie = MovieSession.objects.filter(id=session_id)
     if show_time:
         current_movie.update(show_time=show_time)
